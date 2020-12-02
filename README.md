@@ -1,5 +1,5 @@
 # 001
 
-01 brightness to line length              |  02 test
+01 brightness to line length              |  02 character halftone
 :-------------------------:|:-------------------------:
-![Agnes](_results/01/agnes.svg)  |  ![Ryuichi](_results/01/ryuichi.svg)
+![Agnes](_results/01/agnes.svg)  |  ![Agnes](_results/02/agnes.png)
