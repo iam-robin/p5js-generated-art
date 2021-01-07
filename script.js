@@ -1,16 +1,26 @@
 let img;
+const IMAGE_SIZE_FACTOR = 5;
+const LINE_LENGTH_FACTOR = 0.5;
+const STROKE_WEIGHT = 1;
 
 function preload() {
-	img = loadImage('assets/ryuichi-80.jpg');
+	img = loadImage('assets/architecture/02-120x180.jpg');
 }
 
 function setup() {
-	createCanvas(600, 600, SVG);
-	print(img.width + ' • ' + img.height);
+	const canvasWidth = IMAGE_SIZE_FACTOR * img.width;
+	const canvasHeight = IMAGE_SIZE_FACTOR * img.height;
+
+	createCanvas(canvasWidth, canvasHeight, SVG);
+	noLoop();
+	stroke(0);
+	strokeWeight(STROKE_WEIGHT);
+	background(255);
+
+	print('image size: ' + img.width + ' x ' + img.height);
 }
 
 function draw() {
-	background(255);
 
 	for (let gridX = 0; gridX < img.width; gridX++) {
 		for (let gridY = 0; gridY < img.height; gridY++) {
@@ -26,14 +36,12 @@ function draw() {
 
 			// greyscale conversion
 			const greyscale = round(red(c) * 0.222 + green(c) * 0.707 + blue(c) * 0.071);
-
 			// greyscale to line length
-			let l3 = map(greyscale, 0, 255, 30, 0.1);
-			// l3 *= mouseXFactor;
-			l3 *= 0.3;
-			stroke(0);
-			strokeWeight(1);
-			line(posX, posY, posX + l3, posY + l3);
+			let lineLength = map(greyscale, 0, 255, 10, 0);
+
+			// adjust line lengths
+			lineLength *= LINE_LENGTH_FACTOR;
+			line(posX, posY, posX + lineLength, posY + lineLength);
 		}
 	}
 }
