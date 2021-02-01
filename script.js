@@ -4,7 +4,7 @@ const LINE_LENGTH_FACTOR = 0.6;
 const STROKE_WEIGHT = 1;
 
 function preload() {
-	img = loadImage('assets/architecture/13-120x180.jpg');
+	img = loadImage('assets/agnes-80.jpg');
 }
 
 function setup() {
