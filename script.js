@@ -1,3 +1,6 @@
+const CANVAS_PADDING = 40;
+const CANVAS_COLOR = '#fff';
+
 let shapes;
 let img;
 
@@ -13,6 +16,10 @@ function setup() {
 	shapes = ['@', '%', '#', '*', '+', '=', '-', ':', '.', ' '];
 	// const letters = "@,$,B,%,8,&,W,M,#,*,o,a,h,k,b,d,p,q,w,m,Z,O,0,Q,L,C,J,U,Y,X,z,c,v,u,n,x,r,j,f,t,/,\,|,(,),1,{,},[,],?,-,_,+,~,<,>,i,!,l,I,;,:,^,`,',., ";
 	// shapes = letters.split(",")
+
+	// set canvas padding
+	document.getElementById('defaultCanvas').style.padding = CANVAS_PADDING + 'px';
+	document.getElementById('defaultCanvas').style.backgroundColor = CANVAS_COLOR;
 }
 
 function draw() {
