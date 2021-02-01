@@ -3,6 +3,9 @@ const STROKEWIDTH = 8;
 const COLUMNS = 8;
 const ROWS = 8;
 const PADDING = ITEMSIZE * 0.2;
+const CANVAS_PADDING = 40;
+const CANVAS_COLOR = '#fff';
+
 const GRIDBOX = ITEMSIZE + PADDING + STROKEWIDTH;
 const START = GRIDBOX / 2;
 
@@ -10,9 +13,14 @@ function setup() {
     const totalX = GRIDBOX * COLUMNS;
     const totalY = GRIDBOX * ROWS;
 	createCanvas(totalX, totalY, SVG);
+
 	fill('#F5BB4D');
 	stroke(0);
 	noLoop();
+
+	// set canvas padding
+	document.getElementById('defaultCanvas').style.padding = CANVAS_PADDING + 'px';
+	document.getElementById('defaultCanvas').style.backgroundColor = CANVAS_COLOR;
 }
 
 function draw() {
@@ -31,5 +39,5 @@ function draw() {
 
             ellipse(centerX, centerY, ITEMSIZE, ITEMSIZE);
         }
-    }
+	}
 }
