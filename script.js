@@ -9,8 +9,10 @@ const START = GRIDBOX / 2;
 function setup() {
     const totalX = GRIDBOX * COLUMNS;
     const totalY = GRIDBOX * ROWS;
-    createCanvas(totalX, totalY, SVG);
-    noLoop();
+	createCanvas(totalX, totalY, SVG);
+	fill('#F5BB4D');
+	stroke(0);
+	noLoop();
 }
 
 function draw() {
