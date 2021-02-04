@@ -1,14 +1,13 @@
-# p5.js-es6 boilerplate
+# 003
 
-Boilerplate for writing p5.js sketches in es6 with babel, webpack and sass.
+2d simplex noise grid with dots.
 
 ## Usage
 
-Clone the repository without the whole history:<br />
+The project is based on the following boilerplate:<br />
 `git clone --depth 1 git@github.com:mkontogiannis/p5.js-es6.git`
 
-Cd into the directory and install the dependencies:<br />
-`cd p5.js-es6`<br />
+Install the dependencies:<br />
 `npm install`
 
 Use the following command while writing a sketch to start the dev server with hot reloading:<br />
