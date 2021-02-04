@@ -21,7 +21,6 @@ body {
 .export {
 	position: absolute;
 	top: 16px;
-	left: 16px;
 	font-size: 12px;
 	line-height: 32px;
 	font-weight: 700;
@@ -29,14 +28,18 @@ body {
 	cursor: pointer;
 	background-color: white;
 	padding: 6px 24px;
-    border-radius: 10px;
-}
+	border-radius: 10px;
+	
+	&__svg {
+		left: 16px;
+	}
+	
+	&__png {
+		left: 152px;
+	}
 
-.export__png {
-	left: 152px;
-}
-
-.export:hover {
-	background-color: #005CEC;
-	color: white;
+	&:hover {
+		background-color: #005CEC;
+		color: white;
+	}
 }
