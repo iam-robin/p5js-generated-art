@@ -1,6 +1,16 @@
-# 003
+# 004
 
-2d simplex noise grid with dots.
+2d simplex noise grid with lines which looks like curtains.
+
+## Example
+
+01                                      | 02                                    
+:--------------------------------------:| :--------------------------------------:
+![01](_results/01.png)        | ![02](_results/02.png)   
+
+03                                      | 04                                    
+:--------------------------------------:| :--------------------------------------:
+![03](_results/03.png)        | ![04](_results/04.png)   
 
 ## Usage
 
